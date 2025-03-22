@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Verify Document{% endblock %}
+
+{% block content %}
+    <h2>Verify Document</h2>
+    <form action="/verify-document" method="post" enctype="multipart/form-data">
+        <label for="document">Select Document:</label>
+        <input type="file" id="document" name="document" required>
+        <label for="document_id">Document ID:</label>
+        <input type="text" id="document_id" name="document_id" required>
+        <button type="submit">Verify Document</button>
+    </form>
+{% endblock %}
